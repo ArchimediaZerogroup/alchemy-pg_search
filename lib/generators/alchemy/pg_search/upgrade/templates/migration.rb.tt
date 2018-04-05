@@ -1,6 +1,6 @@
 require 'yaml'
 
-class UpgradeFromAlchemyFerret < ActiveRecord::Migration
+class UpgradeFromAlchemyFerret < ActiveRecord::Migration[5.1]
   def up
     not_searchable_elements.each do |element|
       element['contents'].each do |content|
